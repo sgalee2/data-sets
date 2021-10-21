@@ -6,7 +6,7 @@ MATLAB Data-sets:
 ** elevators.mat **
 --------------------
 
-data = loadmat(r'C:\Users\sgalee2\Desktop\Data Sets\Raw Data\MATLAB Files\elevators.mat')['data']
+data = loadmat(PATH)['data']
 np.random.shuffle(data)
 data = torch.Tensor(data)
 X = data[:, :-1]
@@ -20,7 +20,7 @@ y = data[:, -1]
 ** bike.mat **
 --------------------
 
-data = loadmat(r'C:\Users\sgalee2\Desktop\Data Sets\Raw Data\MATLAB Files\bike.mat')['data']
+data = loadmat(PATH)['data']
 np.random.shuffle(data)
 data = torch.Tensor(data)
 X = data[:, :-1]
@@ -36,7 +36,7 @@ y /= y.std()
 ** protein.mat **
 --------------------
 
-data = loadmat(r'C:\Users\sgalee2\Desktop\Data Sets\Raw Data\MATLAB Files\protein.mat')['data']
+data = loadmat(PATH)['data']
 np.random.shuffle(data)
 data = torch.Tensor(data)
 N = data.shape[0]
@@ -51,7 +51,7 @@ test_x, test_y = data[n_train:, :-1], data[n_train:, -1]
 ** 3droad.mat **
 -------------------
 
-data = loadmat(r'C:\Users\sgalee2\Desktop\Data Sets\Raw Data\MATLAB Files\3droad.mat')['data']
+data = loadmat(PATH)['data']
 np.random.shuffle(data)
 data = torch.Tensor(data)
 N = data.shape[0]
